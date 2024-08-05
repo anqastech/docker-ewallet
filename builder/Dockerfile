@@ -8,10 +8,10 @@ ARG GROUP=ewallet
 ARG UID=10000
 ARG GID=10000
 
-COPY --from=omisegoimages/ewallet-builder-erlang /usr/local/otp /usr/local/otp
-COPY --from=omisegoimages/ewallet-builder-erlang /usr/local/rebar3 /usr/local/rebar3
-COPY --from=omisegoimages/ewallet-builder-elixir /usr/local/elixir /usr/local/elixir
-COPY --from=omisegoimages/ewallet-builder-node /usr/local/node /usr/local/node
+COPY --from=almirsarajcic/ewallet-builder-erlang /usr/local/otp /usr/local/otp
+COPY --from=almirsarajcic/ewallet-builder-erlang /usr/local/rebar3 /usr/local/rebar3
+COPY --from=almirsarajcic/ewallet-builder-elixir /usr/local/elixir /usr/local/elixir
+COPY --from=almirsarajcic/ewallet-builder-node /usr/local/node /usr/local/node
 
 ENV LD_LIBRARY_PATH=/usr/local/otp/lib:$LD_LIBRARY_PATH
 ENV LD_LIBRARY_PATH=/usr/local/elixir/lib:$LD_LIBRARY_PATH

@@ -1,7 +1,7 @@
-FROM omisegoimages/ewallet-builder-erlang
+FROM almirsarajcic/ewallet-builder-erlang
 
-ARG ELIXIR_VERSION="1.8.1"
-ARG ELIXIR_DOWNLOAD_SHA256="de8c636ea999392496ccd9a204ccccbc8cb7f417d948fd12692cda2bd02d9822"
+ARG ELIXIR_VERSION="1.14.5"
+ARG ELIXIR_DOWNLOAD_SHA256="2ea249566c67e57f8365ecdcd0efd9b6c375f57609b3ac2de326488ac37c8ebd"
 
 RUN set -xe \
  && apk add --update --no-cache --virtual .elixir-build \
